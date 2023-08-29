@@ -31,91 +31,97 @@ IMPORTANT: Remember to close your session at the end of your notebook.
 completing the steps in the following two subsections.
 
 ### Precipitation Analysis 
-* Find the most recent date in the dataset.
-* Using that date, get the previous 12 months of precipitation data by
+1. Find the most recent date in the dataset.
+2. Using that date, get the previous 12 months of precipitation data by
 querying the previous 12 months of data.
 HINT: Don't pass the date as a variable to your query.
 
-* Select only the "date" and "prcp" values.
+3. Select only the "date" and "prcp" values.
 
-* Load the query results into a Pandas DataFrame. Explicitly set the
+4. Load the query results into a Pandas DataFrame. Explicitly set the
 column names.
 
-* Sort the DataFrame values by "date".
+5. Sort the DataFrame values by "date".
 
-* Plot the results by using the DataFrame `plot` method, as the following
+6. Plot the results by using the DataFrame `plot` method, as the following
 image shows:
- ![precipitation](Images/precipitation.png)<br>
 
 
-Use Pandas to print the summary statistics for the precipitation data.
+<img src="https://static.bc-edx.com/data/dla-1-2/m10/lms/img/precipitation.jpg" alt="A screenshot depicts the plot" width="440" height="310">
 
-Station Analysis 
+7. Use Pandas to print the summary statistics for the precipitation data.
 
-Design a query to calculate the total number of
+### Station Analysis 
+1. Design a query to calculate the total number of
 stations in the dataset.
 
-Design a query to find the most-active stations (that is, the stations
-that have the most rows). To do so, complete the following steps:
+2. Design a query to find the most-active stations (the stations
+that have the most rows). 
 
-HINT List the stations and observation counts in descending order.
-
-Answer the following question: which station id has the greatest number
+* List the stations and observation counts in descending order.
+* Which station id has the greatest number
 of observations?
-
-Using the most-active station id, calculate the lowest, highest, and
+* Using the most-active station id, calculate the lowest, highest, and
 average temperatures.
+HINT: Use functions such as `func.min`, `func.max`, `func.avg` and `func.count`
 
-Design a query to get the previous 12 months of temperature observation
-(TOBS) data. To do so, complete the following steps:
+3. Design a query to obtain the previous 12 months of temperature observation
+(TOBS) data. 
 
-Filter by the station that has the greatest number of observations.
-
-Query the previous 12 months of TOBS data for that station.
-
-Plot the results as a histogram with bins=12, as the following image
+* Filter by the station that has the greatest number of observations.
+* Query the previous 12 months of TOBS data for that station.
+* Plot the results as a histogram with bins=12, as the following image
 shows:
 
-A screenshot depicts the histogram.
+<img src="https://static.bc-edx.com/data/dla-1-2/m10/lms/img/station-histogram.jpg" alt="A screenshot depicts the histogram." width="440" height="310">
 
-Close your session.
 
-</p> 
+4. Close your session.
+
 
 ## PART 2: Design Your Climate App 
 
-Now that you’ve completed your initial
-analysis, you’ll design a Flask API based on the queries that you just
-developed. To do so, use Flask to create your routes as follows:
+Design a Flask API based on the queries developed.
+Use Flask to create the following routes:
 
-/ Start at the homepage.
+1. `/`
+* Start at the homepage.
+* List all the available routes.
 
-List all the available routes.
+2. `/api/v1.0/precipitation`
+* Convert the query results to a dictionary by
+using `date` as the key and `prcp` as the value.
+* Return the JSON representation of your dictionary.
 
-/api/v1.0/precipitation Convert the query results to a dictionary by
-using date as the key and prcp as the value.
-
-Return the JSON representation of your dictionary.
-
-/api/v1.0/stations Return a JSON list of stations from the dataset.
-/api/v1.0/tobs Query the dates and temperature observations of the
+3. `/api/v1.0/stations`
+*  Return a JSON list of stations from the dataset.
+  
+5. `/api/v1.0/tobs`
+* Query the dates and temperature observations of the
 most-active station for the previous year of data.
+* Return a JSON list of temperature observations for the previous year.
 
-Return a JSON list of temperature observations for the previous year.
-
-/api/v1.0/<start> and /api/v1.0/<start>/<end> Return a JSON list of the
-minimum temperature, the average temperature, and the maximum
+5. `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
+* Return a JSON list of the minimum temperature, the average temperature, and the maximum
 temperature for a specified start or start-end range.
 
-For a specified start, calculate TMIN, TAVG, and TMAX for all the dates
+* For a specified start, calculate` TMIN`, `TAVG`, and `TMAX` for all the dates
 greater than or equal to the start date.
 
-For a specified start date and end date, calculate TMIN, TAVG, and TMAX
+* For a specified start date and end date, calculate `TMIN`, `TAVG`, and `TMAX`
 for the dates from the start date to the end date, inclusive.
 
-Hints Join the station and measurement tables for some of the queries.
-
-Use the Flask jsonify function to convert your API data to a valid JSON
+#### HINTS
+* Join the station and measurement tables for some of the queries.
+* Use the Flask `jsonify` function to convert your API data to a valid JSON
 response object.
 
-</div>
+
+
+
+
+
+
+
+
+
