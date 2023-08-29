@@ -1,19 +1,3 @@
----
-jupyter:
-  language_info:
-    name: python
-  nbformat: 4
-  nbformat_minor: 2
-  orig_nbformat: 4
----
-
-<div class="cell code">
-
-``` python
-```
-
-</div>
-
 <div class="cell markdown">
 
 Instructions
@@ -24,12 +8,14 @@ decide to do a climate analysis about the area.
 
 <img src="https://static.bc-edx.com/data/dla-1-2/m10/lms/img/surfs-up.jpg" alt="Surfs Up" width="500" height="300">
 
-Part 1: Analyse and Explore the Climate Data In this section, you’ll use
+
+PART 1: 
+Analyse and Explore the Climate Data In this section, you’ll use
 Python and SQLAlchemy to do a basic climate analysis and data
 exploration of your climate database. Specifically, you’ll use
 SQLAlchemy ORM queries, Pandas, and Matplotlib. To do so, complete the
 following steps:
-
+</section>
 Note that you’ll use the provided files (climate_starter.ipynb and
 hawaii.sqlite) to complete your climate analysis and data exploration.
 
@@ -93,6 +79,8 @@ shows:
 A screenshot depicts the histogram.
 
 Close your session.
+
+</p> 
 
 Part 2: Design Your Climate App Now that you’ve completed your initial
 analysis, you’ll design a Flask API based on the queries that you just
