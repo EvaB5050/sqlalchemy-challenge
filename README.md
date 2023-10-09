@@ -5,7 +5,7 @@ Congratulations! You've decided to treat yourself to a long holiday
 vacation in Honolulu, Hawaii. To help with your trip planning, you
 decide to do a climate analysis about the area. 
 
-<img src="https://static.bc-edx.com/data/dla-1-2/m10/lms/img/surfs-up.jpg" alt="Surfs Up" width="500" height="300">
+<img src="https://static.bc-edx.com/data/dla-1-2/m10/lms/surfs-up.jpg" alt="Surfs Up" width="500" height="300">
 
 
 ## PART 1: Analyse and Explore the Climate Data
